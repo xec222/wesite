@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kimlik Kartı ve Müzik Çalar</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">Kimlik Kartı</div>
+    <div class="content">
+        <div class="photo">
+            <img src="your_photo.jpg" alt="Photo">
+        </div>
+        <div class="info">
+            <h2>Ad Soyad</h2>
+            <p>Doğum Tarihi: 01.01.1990</p>
+            <p>Cinsiyet: </p>
+            <p>Uyruk: </p>
+            <p>Vatandaşlık: </p>
+            <p>TC Kimlik No: </p>
+        </div>
+    </div>
+</div>
+
+<div class="music-player">
+    <div class="album-art">
+        <img src="album_art.jpg" alt="Album Art">
+    </div>
+    <div class="controls">
+        <button id="play-pause-btn">&#9658;</button>
+        <div class="song-title">Şarkı Adı</div>
+    </div>
+    <audio id="audio-player" src="song.mp3"></audio>
+</div>
+
+<div class="login" id="login-section">
+    <h2>Giriş Yap</h2>
+    <form id="login-form">
+        <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+        <input type="password" id="password" placeholder="Şifre" required>
+        <button type="submit">Giriş Yap</button>
+    </form>
+</div>
+
+<div class="diary" id="diary-section" style="display: none;">
+    <h2>Günlük</h2>
+    <form id="diary-form">
+        <textarea id="diary-entry" placeholder="Bugün neler yaptınız?" rows="4"></textarea>
+        <button type="submit">Ekle</button>
+    </form>
+    <div id="entries">
+        <!-- Günlük girişleri burada görüntülenecek -->
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
