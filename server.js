@@ -9,6 +9,7 @@ const PORT = 3000;
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
+// Günlük girişlerini kaydetme
 app.post('/save-entry', (req, res) => {
     const entry = req.body.entry;
     const entryFilePath = path.join(__dirname, 'entries', `${Date.now()}.txt`);
@@ -20,6 +21,7 @@ app.post('/save-entry', (req, res) => {
     });
 });
 
+// Günlük girişlerini alma
 app.get('/get-entries', (req, res) => {
     const entriesDir = path.join(__dirname, 'entries');
     fs.readdir(entriesDir, (err, files) => {
